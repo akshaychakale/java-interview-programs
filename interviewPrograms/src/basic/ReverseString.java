@@ -7,7 +7,7 @@ public class ReverseString {
 
         reverseString(str);
         reverseWords(str);
-//        reverseWordsInSamePlace(str);
+        reverseWordsInSamePlace(str);
     }
 
     private static void reverseString(String str) {
@@ -20,23 +20,25 @@ public class ReverseString {
     }
 
     private static void reverseWords(String str) {
-        String[] words= str.split(" ");
+        String[] words = str.split(" ");
         System.out.println("");
-        for (int i = words.length-1; i >=0; i--) {
-            System.out.print(words[i]+" ");
+        for (int i = words.length - 1; i >= 0; i--) {
+            System.out.print(words[i] + " ");
         }
 
     }
 
     public static void reverseWordsInSamePlace(String str) {
-        String[] words= str.split(" ");
+        String[] words = str.split(" ");
         System.out.println("");
-        for (int i = 0; i < words.length; i++) {
-            String word = words[i];
-            for (int j = word.length()-1; j >=0 ; j--) {
-                System.out.print(words[j]);
-            }
+
+        String rev = "";
+        for (String w : words) {
+            StringBuilder strb = new StringBuilder(w);
+            strb.reverse();
+            rev += strb.toString() + " ";
         }
+        System.out.println(rev.trim());
     }
 }
 
