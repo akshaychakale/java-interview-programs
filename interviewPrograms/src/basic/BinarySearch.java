@@ -1,15 +1,19 @@
 package basic;
 
+import java.util.Arrays;
+
 public class BinarySearch {
 
     public static void main(String[] args) {
-        int arr[] = {2, 3, 4, 54, 89, 45, 797, 132, 40};
-        int x = 40;
+        int arr[] = {2, 3, 4, 54, 89, 45, 797, 132, 10, 40};
+        int x = 10;
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
         int result = binarySearch(arr, x);
         if (result == -1) {
             System.out.println("element not fount");
         } else {
-            System.out.println("Element is present at index " + result);
+            System.out.println("Element "+x+" is present at index " + result);
         }
     }
 
