@@ -3,9 +3,11 @@ package basic;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Demo1 {
+public class PrintUniqueChars {
 
     public static void main(String[] args) {
+//        Print non-repeating characters from the string
+//        Asked in R-systems interview
         String str = "Hippopotamus";
 
         char[] ch=str.toCharArray();
