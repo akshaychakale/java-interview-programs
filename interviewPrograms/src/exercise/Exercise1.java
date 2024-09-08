@@ -1,7 +1,9 @@
 package exercise;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Exercise1 {
     /*
@@ -16,13 +18,14 @@ public class Exercise1 {
        You can return the answer in any order.
      */
     public static void main(String[] args) {
-        int[] nums = {2, 7, 11, 15};
-        int target = 18;
+        int[] nums = {-2, 7, 11, 15};
+        int target = 0;
         List<Integer> result = findIndices(nums, target);
-        if (result != null) {
-            System.out.println("indices are :"+result);
-        }else
-            System.out.println("indices not available for target: "+target);
+        if (!result.isEmpty()) {
+            System.out.println("indices are :" + result);
+        } else
+            System.out.println("indices not available for target: " + target);
+
     }
 
     public static List<Integer> findIndices(int[] arr, int target) {
@@ -36,8 +39,22 @@ public class Exercise1 {
                 }
             }
         }
+        return indices;
+    }
+    public static List<Integer> findIndices2(int[] arr, int target) {
+        Map<Integer, Integer> map = new HashMap<>();
+        List<Integer> indices = new ArrayList<>();
 
+        for (int i = 0; i < arr.length; i++) {
+            int complement = target - arr[i];
+            if (map.containsKey(complement)) {
+                indices.add(map.get(complement));
+                indices.add(i);
+                return indices; // Return as soon as we find the pair
+            }
+            map.put(arr[i], i); // Store the index of the current number
+        }
 
-        return null;
+        return indices; // Return empty list if no pair is found
     }
 }
