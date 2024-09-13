@@ -1,9 +1,6 @@
 package exercise;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Exercise1 {
     /*
@@ -19,7 +16,9 @@ public class Exercise1 {
      */
     public static void main(String[] args) {
         int[] nums = {-2, 7, 11, 15};
-        int target = 0;
+        int target = 5;
+        int[] res = findIndices3(nums, target);
+        System.out.println(Arrays.toString(res));
         List<Integer> result = findIndices(nums, target);
         if (!result.isEmpty()) {
             System.out.println("indices are :" + result);
@@ -56,5 +55,17 @@ public class Exercise1 {
         }
 
         return indices; // Return empty list if no pair is found
+    }
+
+    public static int[] findIndices3(int[] arr, int target) {
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] + arr[j] == target) {
+                   return new int[] {i,j};
+                }
+            }
+        }
+        return new int[0];
     }
 }
