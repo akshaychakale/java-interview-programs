@@ -28,4 +28,7 @@ public class SecondLargestInArray {
         }
         System.out.println("second largest no is: "+arr[arr.length-2]);
     }
+
+ public static int findSecondLargest3(int[] arr){
+}
 }
