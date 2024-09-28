@@ -1,3 +1,4 @@
+
 package basic;
 
 public class CheckEmptyString {
@@ -8,3 +9,4 @@ public class CheckEmptyString {
         System.out.println(str.isEmpty());
     }
 }
+
