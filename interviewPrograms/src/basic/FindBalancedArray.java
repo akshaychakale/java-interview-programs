@@ -4,6 +4,7 @@ public class FindBalancedArray {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 6};
+//        int[] arr = {2, 8, 3, 4, 6};
 
         int balancedIndex = findBalancedIndex(arr);
 
