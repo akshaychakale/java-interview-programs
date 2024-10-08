@@ -39,13 +39,15 @@ public class CompareArrays {
     }
 
     public static boolean isArrayEquals2(int[] a1, int[] a2) {
-
-        for (int i = 0; i < a1.length; i++) {
-            if (a1[i] != a2[i]) {
-                return false;
+        if (a1.length != a2.length) {
+            for (int i = 0; i < a1.length; i++) {
+                if (a1[i] != a2[i]) {
+                    return false;
+                }
             }
-        }
 
-        return true;
+            return true;
+        }
+        return false;
     }
 }
