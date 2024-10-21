@@ -3,10 +3,10 @@ package practice;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class StreamsMatcher {
+public class RegExpr {
 
     public static void main(String[] args) {
-       //Basic matching example 1
+       //Basic pattern matching demo using matches()
         Pattern pat;
         Matcher mat;
         boolean found;
