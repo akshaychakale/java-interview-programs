@@ -25,5 +25,14 @@ public class RegExpr2 {
             System.out.println("Test found at index " + mat1.start());
         }
         System.out.println("______________________________________");
+
+        //Using Wildcard quantifiers
+        //group() - it return the subsequence matched
+        Pattern pat2 = Pattern.compile("W+");
+        Matcher mat2 = pat2.matcher("W WW WWW");
+        while (mat2.find()){
+            System.out.println("Match: "+mat2.group());
+        }
+
     }
 }
