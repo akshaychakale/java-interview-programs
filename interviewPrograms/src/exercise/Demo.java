@@ -22,8 +22,11 @@ public class Demo {
         for ( var v : map.entrySet()){
             System.out.print(v.getKey()+":"+v.getValue()+" ");
         }
+
         System.out.println();
+
         List<Map.Entry<Character, Integer>> entryList = new ArrayList<>(map.entrySet());
+
         Collections.sort(entryList, new Comparator<Map.Entry<Character, Integer>>() {
             @Override
             public int compare(Map.Entry<Character, Integer> e1, Map.Entry<Character, Integer> e2) {
