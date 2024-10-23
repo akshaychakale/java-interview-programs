@@ -6,8 +6,10 @@ public class FP01Functional {
 
     public static void main(String[] args) {
 //        printAllNumbersInListFunctional(List.of(1,23,56,454,65,11,22,54));
-        printAllEvenNumbersInListFunctional(List.of(1,23,56,454,65,11,22,54));
+//        printAllEvenNumbersInListFunctional(List.of(1,23,56,454,65,11,22,54));
+
     }
+
 
 //    private static  void print(int n){
 //        System.out.println(n);
