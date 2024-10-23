@@ -9,16 +9,16 @@ public class FP01Structured {
         printAllEvenNumbersInListStructured(List.of(1,23,56,454,65,11,22,54));
     }
 
-    private static void printAllEvenNumbersInListStructured(List<Integer> integers) {
-        for (int n : integers){
+    private static void printAllEvenNumbersInListStructured(List<Integer> nums) {
+        for (int n : nums){
             if (n%2 == 0) {
                 System.out.println(n);
             }
         }
     }
 
-    private static void printAllNumbersInListStructured(List<Integer> integers) {
-        for (int n : integers){
+    private static void printAllNumbersInListStructured(List<Integer> nums) {
+        for (int n : nums){
             System.out.println(n);
         }
     }
