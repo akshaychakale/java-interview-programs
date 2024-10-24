@@ -1,6 +1,8 @@
 package leetcode;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Demo1234 {
@@ -9,7 +11,7 @@ public class Demo1234 {
         String str= "Print the characters and how many times each character is repeated";
 
         char[] ch =str.toCharArray();
-
+//
         Map<Character,Integer> map = new HashMap<>();
         for (int i = 0; i < ch.length; i++) {
             if (map.containsKey(ch[i])) {
@@ -19,5 +21,7 @@ public class Demo1234 {
             }
         }
         System.out.println(map);
+
+
     }
 }
