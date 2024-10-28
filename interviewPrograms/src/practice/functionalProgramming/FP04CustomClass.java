@@ -116,6 +116,23 @@ public class FP04CustomClass {
         System.out.println(courses.stream()
                 .sorted(comparingByNoOfStudentsIncreasing).skip(3).limit(3).collect(Collectors.toList()));
 
+        System.out.println("----------------------------------------------");
+        /*
+         takeWhile - The takeWhile method retrieves elements from the beginning of a stream as long as a specified
+         predicate holds true. Once it encounters an element that does not satisfy the predicate, it stops processing
+         further elements.
+         dropWhile - the dropWhile method skips elements from the start of a stream until it finds an element that does
+          not satisfy the predicate. After this point, all subsequent elements are included in the result. */
+
+        System.out.println("Courses >>: "+courses);
+
+        System.out.println(
+        courses.stream().takeWhile(course -> course.getReviewScore()>=95).collect(Collectors.toList()));
+
+        System.out.println(
+                courses.stream().dropWhile(course -> course.getReviewScore()>=95).collect(Collectors.toList()));
+
+
 
 
 
