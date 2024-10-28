@@ -1,6 +1,7 @@
 package practice.functionalProgramming;
 
 import java.util.List;
+import java.util.function.Predicate;
 
 class Course {
     private String name;
@@ -69,7 +70,30 @@ public class FP04CustomClass {
                 new Course("Docker", "Cloud", 92, 20000),
                 new Course("Kubernetes", "Cloud", 91, 20000)
         );
-//allMatch, noneMatch, anyMatch
+
+//        //allMatch, noneMatch, anyMatch
+
+        Predicate<Course> reviewScoreGreaterThan95Predicate = course -> course.getReviewScore() > 95;
+        Predicate<Course> reviewScoreGreaterThan90Predicate = course -> course.getReviewScore() > 90;
+        Predicate<Course> reviewScoreLessThan90Predicate = course -> course.getReviewScore() < 90;
+
+        System.out.println(courses.stream().allMatch(reviewScoreGreaterThan95Predicate));
+        System.out.println(courses.stream().noneMatch(reviewScoreLessThan90Predicate));
+        System.out.println(courses.stream().anyMatch(reviewScoreLessThan90Predicate));
+        System.out.println(courses.stream().anyMatch(reviewScoreGreaterThan90Predicate));
+        System.out.println("-----------------------------------------------------------");
+
+        Predicate<Course> noOfStudentsGreaterThan90Predicate = course -> course.getNoOfStudents() > 90;
+        Predicate<Course> noOfStudentsGreaterThan95Predicate = course -> course.getNoOfStudents() > 95;
+        Predicate<Course> noOfStudentsLessThan90Predicate = course -> course.getNoOfStudents() < 90;
+
+        System.out.println(courses.stream().allMatch(noOfStudentsGreaterThan90Predicate));
+        System.out.println(courses.stream().anyMatch(noOfStudentsGreaterThan95Predicate));
+        System.out.println(courses.stream().noneMatch(noOfStudentsLessThan90Predicate));
+        System.out.println(courses.stream().noneMatch(noOfStudentsGreaterThan95Predicate));
+
+
+
 
     }
 
