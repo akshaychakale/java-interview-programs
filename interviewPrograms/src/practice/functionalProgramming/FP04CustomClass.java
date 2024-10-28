@@ -1,7 +1,9 @@
 package practice.functionalProgramming;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 class Course {
     private String name;
@@ -91,6 +93,28 @@ public class FP04CustomClass {
         System.out.println(courses.stream().anyMatch(noOfStudentsGreaterThan95Predicate));
         System.out.println(courses.stream().noneMatch(noOfStudentsLessThan90Predicate));
         System.out.println(courses.stream().noneMatch(noOfStudentsGreaterThan95Predicate));
+        System.out.println("----------------------------------------------------------");
+
+        //Comparator
+        Comparator<Course> comparingByNoOfStudentsIncreasing = Comparator.comparing(Course::getNoOfStudents);
+        Comparator<Course> comparingByNoOfStudentsDecreasing = Comparator.comparing(Course::getNoOfStudents).reversed();
+        Comparator<Course> comparingByNoOfStudentsAndReview = Comparator.comparing(Course::getNoOfStudents).thenComparing(Course::getReviewScore);
+
+        System.out.println(courses.stream().sorted(comparingByNoOfStudentsIncreasing).collect(Collectors.toList()));
+        System.out.println(courses.stream().sorted(comparingByNoOfStudentsDecreasing).collect(Collectors.toList()));
+        System.out.println();
+        System.out.println(courses.stream().sorted(comparingByNoOfStudentsAndReview).collect(Collectors.toList()));
+        System.out.println("----------------------------------------------");
+
+        //limit , skip
+        System.out.println(courses.stream()
+                .sorted(comparingByNoOfStudentsIncreasing).limit(5).collect(Collectors.toList()));
+
+        System.out.println(courses.stream()
+                .sorted(comparingByNoOfStudentsIncreasing).skip(5).collect(Collectors.toList()));
+
+        System.out.println(courses.stream()
+                .sorted(comparingByNoOfStudentsIncreasing).skip(3).limit(3).collect(Collectors.toList()));
 
 
 
