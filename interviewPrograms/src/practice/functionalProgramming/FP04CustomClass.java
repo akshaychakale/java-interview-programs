@@ -131,6 +131,28 @@ public class FP04CustomClass {
 
         System.out.println(
                 courses.stream().dropWhile(course -> course.getReviewScore()>=95).collect(Collectors.toList()));
+        System.out.println("--------------------------------------");
+
+        //
+        System.out.println(
+        courses.stream()
+                .max(Comparator.comparing(Course::getNoOfStudents).thenComparing(Course::getReviewScore)));
+
+         System.out.println(
+                courses.stream()
+                        .min(Comparator.comparing(Course::getNoOfStudents).thenComparing(Course::getReviewScore)));
+
+         System.out.println(
+                courses.stream()
+                        .filter(reviewScoreLessThan90Predicate)
+                        .min(Comparator.comparing(Course::getNoOfStudents).thenComparing(Course::getReviewScore))
+                        .orElse(new Course("Kubernetes","Cloud",91,20000)));
+                        //Optional.Empty
+                         Kubernetes:20000:91
+
+
+
+
 
 
 
