@@ -148,7 +148,10 @@ public class FP04CustomClass {
                         .min(Comparator.comparing(Course::getNoOfStudents).thenComparing(Course::getReviewScore))
                         .orElse(new Course("Kubernetes","Cloud",91,20000)));
                         //Optional.Empty
-                         Kubernetes:20000:91
+                        //Kubernetes:20000:91
+
+        System.out.println("------------------------------------------");
+
 
 
 
