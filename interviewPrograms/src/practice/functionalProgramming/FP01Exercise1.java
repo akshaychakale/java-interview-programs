@@ -19,12 +19,7 @@ public class FP01Exercise1 {
         //Exercise 5 : print cubes of odd numbers
         printCubesOfOddNumbersInListFunctional(List.of(1, 23, 56, 454, 65, 11, 22, 54));
 
-        //Exercise 6 : add the numbers in list
-
-
     }
-
-
 
     private static void printCubesOfOddNumbersInListFunctional(List<Integer> numbers) {
         numbers.stream().filter(num -> num % 2 != 0).map(num -> num * num * num).forEach(System.out::println);
