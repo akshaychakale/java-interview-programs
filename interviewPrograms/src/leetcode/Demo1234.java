@@ -11,7 +11,6 @@ public class Demo1234 {
         String str= "Print the characters and how many times each character is repeated";
 
         char[] ch =str.toCharArray();
-//
         Map<Character,Integer> map = new HashMap<>();
         for (int i = 0; i < ch.length; i++) {
             if (map.containsKey(ch[i])) {
