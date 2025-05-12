@@ -9,13 +9,23 @@ public class Misc {
 //        findFactorial(num);
 
         //merge two arrays
-        int[] arr1={0,1,2,3,4,5};
+        int[] arr1={0,1,2,3,4,4,5};
         int[] arr2={6,7,8,9,10};
 
 //        mergeTwoArrays(arr1,arr2);
 
 //        findSecondLargestElement(arr1);
-        findSecondSmallestElement(arr1);
+//        findSecondSmallestElement(arr1);
+
+        String[] strArray = {"Apple","Samsung","Oppo"};
+
+//        reverseWordsInSamePosition(strArray);
+    }
+
+    private static void reverseWordsInSamePosition(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+
+        }
     }
 
     public static void findSecondLargestElement(int[] arr){
@@ -99,4 +109,5 @@ public class Misc {
         System.out.println("its prime");
         return true;
     }
-}
+
+    }
