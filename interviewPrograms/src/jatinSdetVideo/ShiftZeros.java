@@ -1,5 +1,8 @@
 package jatinSdetVideo;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ShiftZeros {
 
     public static void main(String[] args) {
@@ -23,5 +26,21 @@ public class ShiftZeros {
         for (int n : num){
             System.out.print(n);
         }
+    }
+
+    private static void findCharCounts(String str){
+        char[] chars=str.toCharArray();
+
+        Map<Character,Integer> freq=new HashMap<>();
+
+        for(int i=0;i<chars.length;i++){
+            if(freq.containsKey(chars[i])){
+                freq.put(chars[i],freq.get(chars[i])+1);
+            }else{
+                freq.put(chars[i],1);
+            }
+        }
+
+        System.out.println("freq: "+freq);
     }
 }
