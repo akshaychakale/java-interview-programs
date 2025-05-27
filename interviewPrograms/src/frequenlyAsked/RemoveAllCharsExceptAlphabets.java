@@ -1,5 +1,7 @@
 package frequenlyAsked;
 
+import java.util.regex.Pattern;
+
 public class RemoveAllCharsExceptAlphabets {
     public static void main(String[] args) {
         String str = " hello @world 123 !";
