@@ -6,7 +6,7 @@ public class IsFactorialNumber {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter No:");
-        findFactorial(scan.nextInt());
+        findFactorial2(scan.nextInt());
         scan.close();
     }
 
@@ -25,5 +25,20 @@ public class IsFactorialNumber {
             System.out.println("Factorial of "+num+" is "+factorial);
         }
 
+    }
+
+    public static void findFactorial2(int num){
+
+        if (num<1){
+            System.out.println("factorial of negative number is not defined");
+        }
+
+        int factorial=1;
+
+        for (int i = 1; i <= num; i++) {
+            factorial*=i;
+        }
+
+        System.out.println(factorial);
     }
 }

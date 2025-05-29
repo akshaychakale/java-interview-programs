@@ -18,4 +18,8 @@ public class CapitaliseFirstLetter {
         }
         System.out.println(string);
     }
+
+    private static void capitalizeFirstLetters2(String str){
+
+    }
 }

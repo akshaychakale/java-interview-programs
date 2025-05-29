@@ -15,7 +15,7 @@ public class RemoveDuplicatesInString {
         for (char c: chars){
             if(!set.contains(c)){
                 set.add(c);
-                string=string.append(c);
+                string.append(c);
             }
         }
 
