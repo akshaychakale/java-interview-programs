@@ -46,7 +46,7 @@ public class CountVowelsAndConsonants {
     }
 
     private static boolean isVowel(char c){
-        char ch = Character.toUpperCase(c);
+        char ch = Character.toLowerCase(c);
         return ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u';
     }
 
