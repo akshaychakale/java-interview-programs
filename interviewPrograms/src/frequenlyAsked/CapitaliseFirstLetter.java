@@ -7,6 +7,7 @@ public class CapitaliseFirstLetter {
 //        System.out.println(output);
     }
 
+
     private static void capitalizeFirstLetters(String str) {
         String[] words = str.split("\\s");
         String string = "";

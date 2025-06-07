@@ -8,6 +8,7 @@ public class BalancedArray {
         getBalancedArray2(arr);
     }
 
+
     private static void getBalancedArray2(int[] arr) {
         int mid=arr.length/2;
         int leftSum=0, rightSum=0;
