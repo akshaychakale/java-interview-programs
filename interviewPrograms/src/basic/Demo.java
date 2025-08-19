@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Demo {
+public class FindMultipleMissingNumbers {
     public static void main(String[] args) {
         int[] array = {2, 4, 6, 7, 9};
         List<Integer> missingNumbers = findMissingNumbers(array);
